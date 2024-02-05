@@ -1,0 +1,463 @@
+
+
+<!DOCTYPE html>
+<html class="loading semi-dark-layout" lang="en" data-layout="semi-dark-layout" data-textdirection="ltr">
+<!-- BEGIN: Head-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
+    <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+    <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="PIXINVENT">
+    <title>Influencer - Myrefera </title>
+    <link rel="apple-touch-icon" href="/static/app-assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/app-assets/images/avatars/mainwebsite.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
+
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/app-assets/vendors/css/tables/datatable/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/app-assets/vendors/css/tables/datatable/responsive.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/app-assets/vendors/css/tables/datatable/buttons.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/app-assets/vendors/css/tables/datatable/rowGroup.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/app-assets/vendors/css/pickers/flatpickr/flatpickr.min.css">
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="/static/app-assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/static/app-assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="/static/app-assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="/static/app-assets/css/components.css">
+    <link rel="stylesheet" type="text/css" href="/static/app-assets/css/themes/dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="/static/app-assets/css/themes/bordered-layout.css">
+    <link rel="stylesheet" type="text/css" href="/static/app-assets/css/themes/semi-dark-layout.css">
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="/static/app-assets/css/core/menu/menu-types/vertical-menu.css">
+    <!-- END: Page CSS-->
+
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="/static/assets/css/style.css">
+    <!-- END: Custom CSS-->
+
+</head>
+<!-- END: Head-->
+
+<!-- BEGIN: Body-->
+<style>
+    .instagram {
+        height: 55px;
+        border-radius: 50px;
+        
+    }
+    img.verify {
+        height: 58px;
+        margin-left: -15px;
+    }
+    img.verify1 {
+        height: 30px;
+        
+       
+    }
+    .green{
+        background-color: #31CE36 ;
+        width: 91px;
+        height: 28px;
+        color: white;
+        font-size: 13px;
+        padding-top: 3px;
+        font-weight: bold;
+        padding-left: 6px;
+    }
+    .red{
+        background-color: #F25961;
+        width: 91px;
+        height: 28px;
+        color: white;
+        font-size: 13px;
+        padding-top: 3px;
+        font-weight: bold;
+        padding-left: 6px;
+    }
+    #green{
+        background-color: #31CE36 ;
+        width: 91px;
+        height: 28px;
+        color: white;
+        font-size: 13px;
+        padding-top: 3px;
+        font-weight: bold;
+        padding-left: 6px;
+    }
+    #red{
+        background-color: #F25961;
+        width: 91px;
+        height: 28px;
+        color: white;
+        font-size: 13px;
+        padding-top: 3px;
+        font-weight: bold;
+        padding-left: 6px;
+    }
+
+    #university_table_wrapper {
+        overflow: hidden;
+    }
+
+    .form-select {
+        background-position: right 0.2rem center !important;
+    }
+
+    #university_table_wrapper .row:nth-child(2) .col-sm-12 {
+        overflow-x: scroll;
+    }
+
+    #university_table_wrapper .card .table {
+        background: #fff;
+    }
+    
+</style>
+
+<body class="vertical-layout vertical-menu-modern  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="">
+
+    <!-- BEGIN: Header-->
+    {% include 'common/header.html' %}
+    <!-- END: Header-->
+    {% include "common/sidebar.html" %}
+    <!-- END: Main Menu-->
+
+    <!-- BEGIN: Content-->
+    
+
+    <div class="app-content content ">
+                 <div class="msg">
+         </div>
+        <div class="success-msg col-md-4" style=" color: #270;background-color: #DFF2BF; margin: 10px 0;
+        padding: 10px;display:none;
+        border-radius: 3px 3px 3px 3px;">
+            <i class="fa fa-check"></i>
+            Influencer Accepted
+          </div>
+
+          <div class="error-msg  col-md-4" style=" color: #D8000C;
+          background-color: #FFBABA; margin: 10px 0;
+          padding: 10px;display:none;
+          border-radius: 3px 3px 3px 3px;">
+          <i class="fa fa-times-circle"></i>
+          Influencer Rejected
+            </div>     
+
+   
+        
+        <h5 id="message"></h5>
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper container-xxl p-0">
+            <div class="content-header row">
+                <div class="content-header-left col-md-9 col-12 mb-2">
+                    <div class="row breadcrumbs-top">
+                        {% comment %} <div class="col-12"> {% endcomment %}
+                            <h2 class="content-header-title float-start mb-0">Influencer List</h2>
+                            <div class="breadcrumb-wrapper">
+                                
+                            </div>
+                        {% comment %} </div> {% endcomment %}
+                    </div>
+                </div>
+               
+            </div>
+            <div class="content-body">
+                <div class="row">
+                <div class="card">
+             
+
+                <!-- Basic table -->
+                <section id="basic-datatable">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card table-responsive">
+                                <table class="datatables-basic table" id="university_table">
+                                    <thead>
+                                        <tr>
+                                         
+                                            <th>id</th>
+                                            <th>Verified Status</th>
+                                            <th>Profile</th>
+                                            <th>Username</th>
+                                            <th>Followers</th>
+                                            <th>Engagement</th>
+                                            <th>Engagement Rate</th>
+                                             <th>Commission</th>
+                                            <th>Action</th>
+                                          
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for i in  influencer%}
+                                        <tr>
+                                           
+                                            <td>{{forloop.counter}}</td>
+                                            <td>{% if i.isverified == 1 %}<img class="verify"  src="/static/app-assets/images/avatars/bluetick.jpeg"></img> {% else %} <img class="verify1"  src="/static/app-assets/images/avatars/not1.png"></img> {% endif %}</td>
+
+                                            <td><img class="instagram" src="{{i.image}}"></td>
+                                            <td style="color: #5271fd;">{{i.username}}</td>
+                                            <td>{{i.follower}}</td>
+                                            <td>{{i.engagements}}</td>
+                                            <td>{{i.engagement_rate}}%</td>
+                                             <td><div class="d-flex">
+                                             {{i.influencerid_id__commission}}
+                                                  <button abc="{{i.influencerid_id__id}}" type="button" class="refund btn-sm ms-2 btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa-solid fa-pen-to-square" style="color: #fff;"></i> </button>
+                                             </div>
+                                             </td>
+                                            <td class ="select "> 
+                                                <select  class="dropdown-mobile form-select" name="select"  {% if i.admin_approved == 1 %} id="green" {% else %} id="red" {% endif %}>        
+                                                    <option value="a{{i.id}}" data-id="1" {% if i.admin_approved == 1 %} selected class="green" {% endif %}>Accepted</option>
+                                                    <option value="d{{i.id}}"  data-id="0" {% if i.admin_approved == 0 %} selected class="red"{% endif %}>Rejected</option>
+                                                     
+                                                </select>
+                                           
+
+
+                                            </td>
+                                           
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                    <!-- Modal to add new record -->
+                    <div class="modal modal-slide-in fade" id="modals-slide-in">
+                        <div class="modal-dialog sidebar-sm">
+                            <form class="add-new-record modal-content pt-0">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">×</button>
+                                <div class="modal-header mb-1">
+                                    <h5 class="modal-title" id="exampleModalLabel">New Record</h5>
+                                </div>
+                                <div class="modal-body flex-grow-1">
+                                    <div class="mb-1">
+                                        <label class="form-label" for="basic-icon-default-fullname">Full Name</label>
+                                        <input type="text" class="form-control dt-full-name" id="basic-icon-default-fullname" placeholder="John Doe" aria-label="John Doe" />
+                                    </div>
+                                    <div class="mb-1">
+                                        <label class="form-label" for="basic-icon-default-post">Post</label>
+                                        <input type="text" id="basic-icon-default-post" class="form-control dt-post" placeholder="Web Developer" aria-label="Web Developer" />
+                                    </div>
+                                    <div class="mb-1">
+                                        <label class="form-label" for="basic-icon-default-email">Email</label>
+                                        <input type="text" id="basic-icon-default-email" class="form-control dt-email" placeholder="john.doe@example.com" aria-label="john.doe@example.com" />
+                                        <small class="form-text"> You can use letters, numbers & periods </small>
+                                    </div>
+                                    <div class="mb-1">
+                                        <label class="form-label" for="basic-icon-default-date">Joining Date</label>
+                                        <input type="text" class="form-control dt-date" id="basic-icon-default-date" placeholder="MM/DD/YYYY" aria-label="MM/DD/YYYY" />
+                                    </div>
+                                    <div class="mb-4">
+                                        <label class="form-label" for="basic-icon-default-salary">Salary</label>
+                                        <input type="text" id="basic-icon-default-salary" class="form-control dt-salary" placeholder="$12000" aria-label="$12000" />
+                                    </div>
+                                    <button type="button" class="btn btn-primary data-submit me-1">Submit</button>
+                                    <button type="reset" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                
+                <!--/ Basic table -->
+
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                        <div class="modal-header">
+
+                            <h5 class="modal-title" id="staticBackdropLabel">Set Commission</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>                                                                                                                        
+                        <div class="modal-body">
+                            <div class="mb-1">
+                        <div class="modal-body text-center" id="refstatus">
+                        <form onsubmit="return false">
+                            {% csrf_token %}
+                            <h5>Commission</h5>
+                            <input class="form-control" type="number" id="amount_paid" required>
+                            <br>
+                            <button hii="" type="button"   id="amount_paid_btn" class="btn btn-primary data-submit me-1" data-bs-dismiss="modal">Submit</button>
+                        </form>
+                    </div>
+                    </div>                                                                                                                                                                                                                             
+                        </div>
+             
+   
+            </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- END: Content-->
+
+    <div class="sidenav-overlay"></div>
+    <div class="drag-target"></div>
+
+    <!-- BEGIN: Footer-->
+    {% comment %} {% include "common/footer.html" %} {% endcomment %}
+    <button class="btn btn-primary btn-icon scroll-top" type="button"><i data-feather="arrow-up"></i></button>
+    <!-- END: Footer-->
+
+
+    <!-- BEGIN: Vendor JS-->
+    <script src="/static/app-assets/vendors/js/vendors.min.js"></script>
+    <!-- BEGIN Vendor JS-->
+
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="/static/app-assets/vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
+    <script src="/static/app-assets/vendors/js/tables/datatable/dataTables.bootstrap5.min.js"></script>
+    <script src="/static/app-assets/vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
+    <script src="/static/app-assets/vendors/js/tables/datatable/responsive.bootstrap5.min.js"></script>
+    <script src="/static/app-assets/vendors/js/tables/datatable/datatables.checkboxes.min.js"></script>
+    <script src="/static/app-assets/vendors/js/tables/datatable/datatables.buttons.min.js"></script>
+    <script src="/static/app-assets/vendors/js/tables/datatable/jszip.min.js"></script>
+    <script src="/static/app-assets/vendors/js/tables/datatable/pdfmake.min.js"></script>
+    <script src="/static/app-assets/vendors/js/tables/datatable/vfs_fonts.js"></script>
+    <script src="/static/app-assets/vendors/js/tables/datatable/buttons.html5.min.js"></script>
+    <script src="/static/app-assets/vendors/js/tables/datatable/buttons.print.min.js"></script>
+    <script src="/static/app-assets/vendors/js/tables/datatable/dataTables.rowGroup.min.js"></script>
+    <script src="/static/app-assets/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
+    <!-- END: Page Vendor JS-->
+
+    <!-- BEGIN: Theme JS-->
+    <script src="/static/app-assets/js/core/app-menu.js"></script>
+    <script src="/static/app-assets/js/core/app.js"></script>
+    <!-- END: Theme JS-->
+
+    <!-- BEGIN: Page JS-->
+    {% comment %} <script src="/static/app-assets/js/scripts/tables/table-datatables-basic.js"></script> {% endcomment %}
+    <!-- END: Page JS-->
+
+    <script>
+     
+        $(document).ready( function () {
+
+
+
+             $('.refund').click(function(){
+                 var id = $(this).attr("abc")
+                 $('#amount_paid_btn').attr("hii",id)
+         
+             })
+            
+            $('#amount_paid_btn').click(function(){
+            
+             var commission= $("#amount_paid").val();
+             var id = $(this).attr("hii")
+         
+             $.ajax({
+             type:'POST',
+             url:'/isadmin/commission2',
+             data:{
+                 "id":id,
+                 "commission":commission,
+                 csrfmiddlewaretoken :$('input[name=csrfmiddlewaretoken]').val()
+             },
+                          
+             success:function(res){
+                 if(res == "commission earned"){
+                     $(".msg").html(`<div class="success-msg col-md-4" style=" color: #270;background-color: #DFF2BF; margin: 10px 0;
+                     padding: 10px;
+                     border-radius: 3px 3px 3px 3px;">
+                         <i class="fa fa-check"></i>
+                         Commission added Successfully
+                       </div>`)
+         
+                       setTimeout(function() {
+                         $(".msg").html("");
+                         window.location.reload(1);
+                         
+                     }, 2000);  
+                       
+                 }
+             }
+             })
+            
+            })
+          
+            
+            $('#university_table').DataTable();
+        });
+        $(window).on('load', function() {
+            if (feather) {
+                feather.replace({
+                    width: 14,
+                    height: 14
+                });
+            }
+        })
+        $(".dropdown-mobile").on('change', function(){
+          
+            
+            var selectedOption = $(this).find('option:selected');
+            var backgroundColor = selectedOption.text() === 'Accepted' ? '#31CE36' : '#F25961';
+        
+            $(this).css('background-color', backgroundColor);
+            selectedOption.css('background-color', backgroundColor);
+        
+            $.ajax({
+                type:'GET',
+                url:'/isadmin/infldec/',
+                data:{
+                  status:$(this).val(),
+
+
+                
+                },
+                success:function(res)
+                {
+                  console.log('res',res);
+                    
+                  if(res == "Influencer accepted"){
+                   
+                    $(".success-msg").css("display", "block");
+                    $(".error-msg").css("display", "none");
+               
+                    
+                    setTimeout(function() {
+                        $(".success-msg").css("display", "none");
+                      }, 3000);
+                 
+                    
+
+                  }
+                  else{
+                    $(".success-msg").css("display", "none");
+                    $(".error-msg").css("display", "block");
+
+                    setTimeout(function() {
+                        $(".error-msg").css("display", "none");
+                      }, 3000);
+
+                  }
+                 
+
+                }
+                
+              })
+
+             
+         
+
+        });
+        
+
+        
+    </script>
+
+   
+</body>
+<!-- END: Body-->
+
+</html>

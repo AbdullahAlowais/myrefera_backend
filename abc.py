@@ -1,0 +1,4 @@
+import stripe
+
+stripe.api_key = "sk_test_51Ln28UHxWF1dGmnDKBC2YvMWO92U7JufqnG5VycljrgeztqcjhY6h1RqsrQiAAWo9bbweuY37DIz1gAVMxNgXUig00hO5qMJhI"
+stripe.Customer.delete("cus_P2uSOCZgBjhcfZ")

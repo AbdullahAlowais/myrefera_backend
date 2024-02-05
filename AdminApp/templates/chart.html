@@ -1,0 +1,342 @@
+
+
+<!DOCTYPE html>
+<html class="loading semi-dark-layout" lang="en" data-layout="semi-dark-layout" data-textdirection="ltr">
+<!-- BEGIN: Head-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
+    <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+    <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="PIXINVENT">
+    <title>Analytics - Myrefera</title>
+    <link rel="apple-touch-icon" href="/static/app-assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/app-assets/images/avatars/mainwebsite.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
+
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/app-assets/vendors/css/tables/datatable/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/app-assets/vendors/css/tables/datatable/responsive.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/app-assets/vendors/css/tables/datatable/buttons.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/app-assets/vendors/css/tables/datatable/rowGroup.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/app-assets/vendors/css/pickers/flatpickr/flatpickr.min.css">
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="/static/app-assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/static/app-assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="/static/app-assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="/static/app-assets/css/components.css">
+    <link rel="stylesheet" type="text/css" href="/static/app-assets/css/themes/dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="/static/app-assets/css/themes/bordered-layout.css">
+    <link rel="stylesheet" type="text/css" href="/static/app-assets/css/themes/semi-dark-layout.css">
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="/static/app-assets/css/core/menu/menu-types/vertical-menu.css">
+    <!-- END: Page CSS-->
+
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="/static/assets/css/style.css">
+    <!-- END: Custom CSS-->
+
+</head>
+<!-- END: Head-->
+
+<!-- BEGIN: Body-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<body class="vertical-layout vertical-menu-modern  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="">
+
+    <!-- BEGIN: Header-->
+    {% include 'common/header.html' %}
+    <!-- END: Header-->
+    {% include "common/sidebar.html" %}
+    <!-- END: Main Menu-->
+
+    <!-- BEGIN: Content-->
+    <div class="app-content content ">
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper container-xxl p-0">
+            <div class="content-header row">
+                <div class="content-header-left col-md-9 col-12 mb-2">
+                    <div class="row breadcrumbs-top">
+                        {% comment %} <div class="col-12"> {% endcomment %}
+                        
+                          <h1 id="sales" hidden>{{sales_data}}</h1>
+                          <h1 id="count" hidden>{{order}}</h1>
+                            <h2 class="content-header-title float-start mb-0">Vendor Analytics  </h2>
+                            <input type ="text" value ={{count}} class ="order" hidden>
+                           
+                            {% comment %} <div class="breadcrumb-wrapper">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">Home</a>
+                                    </li>
+                                    <li class="breadcrumb-item"><a href="#">Datatable</a>
+                                    </li>
+                                    <li class="breadcrumb-item active">Basic
+                                    </li>
+                                </ol>
+                            </div>  {% endcomment %}
+                        {% comment %} </div> {% endcomment %}
+                    </div>
+                </div>
+                <div class="content-header-right text-md-end col-md-3 col-12 d-md-block d-none">
+                    <div class="mb-1 breadcrumb-right">
+                        <div class="dropdown">
+                            {% comment %} <button class="btn-icon btn btn-primary btn-round btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i data-feather="grid"></i></button>
+                            <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="app-todo.html"><i class="me-1" data-feather="check-square"></i><span class="align-middle">Todo</span></a><a class="dropdown-item" href="app-chat.html"><i class="me-1" data-feather="message-square"></i><span class="align-middle">Chat</span></a><a class="dropdown-item" href="app-email.html"><i class="me-1" data-feather="mail"></i><span class="align-middle">Email</span></a><a class="dropdown-item" href="app-calendar.html"><i class="me-1" data-feather="calendar"></i><span class="align-middle">Calendar</span></a></div> {% endcomment %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-body">
+                <div class="row">
+                    {% comment %} <div class="col-12">
+                        <p>Read full documnetation <a href="https://datatables.net/" target="_blank">here</a></p>
+                    </div> {% endcomment %}
+                </div>
+                <!-- Basic table -->
+
+                
+                <section>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card">
+                                <div class="card-header">
+                                  <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+                                </div>
+                                <div class="card-body">
+                                    <div class="payment-information">
+                                      <div class="row mb-2">
+                                        <div class="col-lg-6">
+                                          
+                                        </div>
+                                        
+                                        <div class="col-lg-6"></div>
+                                      </div>
+                                        <div class="row mb-2">
+                                          <div class="col-lg-6">
+                                        
+                                          </div>
+                          
+                                          <div class="col-lg-6">
+                                            <a target="_blank" href="#"></a>
+                                          </div>
+                                        </div>
+  
+                                    </div>
+                                  </div>
+                          
+                            </div>
+                        </div>
+
+                        
+                        <div class="col-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <canvas id="myChart1" style="width:100%;max-width:600px"></canvas>
+                                </div>
+                                <div class="card-body">
+                                    <div class="payment-information">
+                                        <div class="row mb-2">
+                                        <div class="col-lg-6">
+                                            
+                                        </div>
+                                        
+                                        <div class="col-lg-6"></div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col-lg-6">
+                                        
+                                            </div>
+                            
+                                            <div class="col-lg-6">
+                                            <a target="_blank" href="#"></a>
+                                            </div>
+                                        </div>
+    
+                                    </div>
+                                    </div>
+                            
+                            </div>
+                            
+                        </div>
+                    
+                            
+                   
+                    
+
+                    
+                </section>
+               
+                <!--/ Basic table -->
+
+
+             
+   
+
+            </div>
+        </div>
+    </div>
+    <!-- END: Content-->
+
+    <div class="sidenav-overlay"></div>
+    <div class="drag-target"></div>
+
+    <!-- BEGIN: Footer-->
+    {% include "common/footer.html" %}
+    <button class="btn btn-primary btn-icon scroll-top" type="button"><i data-feather="arrow-up"></i></button>
+    <!-- END: Footer-->
+
+
+    <!-- BEGIN: Vendor JS-->
+    <script src="/static/app-assets/vendors/js/vendors.min.js"></script>
+    <!-- BEGIN Vendor JS-->
+
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="/static/app-assets/vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
+    <script src="/static/app-assets/vendors/js/tables/datatable/dataTables.bootstrap5.min.js"></script>
+    <script src="/static/app-assets/vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
+    <script src="/static/app-assets/vendors/js/tables/datatable/responsive.bootstrap5.min.js"></script>
+    <script src="/static/app-assets/vendors/js/tables/datatable/datatables.checkboxes.min.js"></script>
+    <script src="/static/app-assets/vendors/js/tables/datatable/datatables.buttons.min.js"></script>
+    <script src="/static/app-assets/vendors/js/tables/datatable/jszip.min.js"></script>
+    <script src="/static/app-assets/vendors/js/tables/datatable/pdfmake.min.js"></script>
+    <script src="/static/app-assets/vendors/js/tables/datatable/vfs_fonts.js"></script>
+    <script src="/static/app-assets/vendors/js/tables/datatable/buttons.html5.min.js"></script>
+    <script src="/static/app-assets/vendors/js/tables/datatable/buttons.print.min.js"></script>
+    <script src="/static/app-assets/vendors/js/tables/datatable/dataTables.rowGroup.min.js"></script>
+    <script src="/static/app-assets/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
+    <!-- END: Page Vendor JS-->
+
+    <!-- BEGIN: Theme JS-->
+    <script src="/static/app-assets/js/core/app-menu.js"></script>
+    <script src="/static/app-assets/js/core/app.js"></script>
+    <!-- END: Theme JS-->
+
+    <!-- BEGIN: Page JS-->
+    {% comment %} <script src="/static/app-assets/js/scripts/tables/table-datatables-basic.js"></script> {% endcomment %}
+    <!-- END: Page JS-->
+
+    <script>
+       
+        $(document).ready( function () {
+
+            $('#university_table').DataTable();
+        });
+        $(document).on('click','.influencer',function() {
+            var album_id= $(this).data('id');
+            alert(album_id)
+            $.ajax({
+                type:'GET',
+                url:'/isadmin/inf_name/',
+                data:{
+                    status:album_id,
+                  },
+                success:function(response) {
+                  
+                    var table = $("#interest");
+                    table.find("tr").remove();
+                    jQuery.each(response.val, function( i, vals ) {
+                        console.log('val',vals.influencer_name)
+                        var html = '<tr><td>'+vals.influencer_name+'</td></tr>';
+                        var html1 = '<tr><td>'+vals.status+'</td></tr>';
+                       
+                        $("#interest ").append(html);
+                        $("#interest ").append(html1);
+                     
+                     });
+                },
+                error:function(response) {
+                    console.log(response);
+                }
+            });
+        }); 
+  
+    
+       
+        $(window).on('load', function() {
+            if (feather) {
+                feather.replace({
+                    width: 14,
+                    height: 14
+                });
+            }
+
+            
+        })
+
+        
+
+    </script>
+    
+    <script>
+      var total_sale = $('#count').text();
+      console.log(total_sale)
+      z= JSON.parse(total_sale)
+
+      console.log(z)
+      
+      var xValues =['January','February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+      var yValues = z
+      var barColors = ["#00aba9", "green","blue","orange","brown","#00aba9", "green","blue","orange","brown","#00aba9", "green"];
+      
+      new Chart("myChart", {
+        type: "bar",
+        data: {
+          labels: xValues,
+          datasets: [{
+            backgroundColor: barColors,
+            data: yValues
+          }]
+        },
+        options: {
+          legend: {display: false},
+          title: {
+            display: true,
+            text: "Total Order"
+          }
+        }
+      });
+      </script>
+
+   
+  
+ 
+  
+    <script>
+        var total_sale = $('#sales').text();
+        console.log(total_sale)
+        z= JSON.parse(total_sale)
+        
+        var xValues =['January',   'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+        var yValues = z
+        var barColors = ["#00aba9", "green","blue","orange","brown","#00aba9", "green","blue","orange","brown","#00aba9", "green"];
+        
+        new Chart("myChart1", {
+          type: "bar",
+          data: {
+            labels: xValues,
+            datasets: [{
+              backgroundColor: barColors,
+              data: yValues
+            }]
+          },
+          options: {
+            legend: {display: false},
+            title: {
+              display: true,
+              text: "Total Sales"
+            }
+          }
+        });
+        </script>
+   
+</body>
+<!-- END: Body-->
+
+</html>

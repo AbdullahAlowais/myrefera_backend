@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.leantech.me/link/sdk/web/latest/Lean.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <button onClick='lean()'>Connect Account</button>
+    <div id="lean-link"></div>
+    <script>
+        function lean(){
+//Lean.connect({
+//     app_token: "9de351e4-0240-498d-8d8a-c6b8a46de475",
+            //   customer_id: "b77d21bf-72ea-4955-8556-bac91999de6a",
+            //   end_user_id: "fda36e65-fa17-4e89-960c-48f784f21ee2",
+            //   payment_destination_id: "1d8701ba-69d1-4226-a604-62e0d65795c9",
+             //  permissions: [ "identity","balance","accounts","transactions","payments"],
+              //  sandbox: true,
+              //})
+      //      
+       // }
+       Lean.authorize( {
+        app_token: "9de351e4-0240-498d-8d8a-c6b8a46de475",
+        payment_intent_ids: ["bb2d0276-6bcf-4070-bb13-2685a3955d72"],
+        customer_id: "61023285-db5e-4a84-826c-6cec68f06cc5",
+        payment_destination_id: "1d8701ba-69d1-4226-a604-62e0d65795c9",
+      // end_user_id: "a44c4a64-bde9-4936-baaf-96ce0db42af1",
+        sandbox: true
+      });
+    }
+          
+   //    Lean.pay({
+     //       app_token: "9de351e4-0240-498d-8d8a-c6b8a46de475",
+       //     payment_intent_id: "9dae65a7-1dfa-4da7-b58b-b53da74ecee9",
+         //   end_user_id: "b77d21bf-72ea-4955-8556-bac91999de6a",
+           // sandbox: true,
+           // callback: "cb",
+          //});
+        //}
+        </script>
+</body>
+</html>

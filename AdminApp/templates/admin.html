@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- =========================================================
+* Frest - Bootstrap Admin Template | v1.0.0
+==============================================================
+
+* Product Page: https://1.envato.market/frest_admin
+* Created by: PIXINVENT
+* License: You must have a valid license purchased in order to legally use the theme for your project.
+* Copyright PIXINVENT (https://pixinvent.com)
+
+=========================================================
+ -->
+<!-- beautify ignore:start -->
+
+
+  <head>
+  
+  
+    {% include  'common/links.html' %}
+    <!-- Page CSS -->
+    
+    <!-- Helpers -->
+   
+   
+    <!-- Custom notification for demo -->
+    <!-- beautify ignore:end -->
+
+</head>
+
+<body>
+
+   
+    {% block body %}
+
+
+    {% block sidebar %}   
+      {% include "common/sidebar.html" %}  
+    {% endblock sidebar %}
+
+    {% block header %}
+      {% include "common/header.html" %}  
+    {% endblock header %}
+    
+
+    {% block content %}
+      <!-- {{ content }} -->
+    {% endblock content %}
+
+    {% block footer %}
+
+        {% include "common/footer.html" %}
+
+    {% endblock footer %}
+
+   
+  
+
+{% block javascripts %}
+
+<!-- Core JS -->
+  <!-- build:js assets/vendor/js/core.js -->
+  <script src="/static/assets/vendor/libs/jquery/jquery.js"></script>
+  <script src="/static/assets/vendor/libs/popper/popper.js"></script>
+  <script src="/static/assets/vendor/js/bootstrap.js"></script>
+  <script src="/static/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+  
+  <script src="/static/assets/vendor/libs/hammer/hammer.js"></script>
+  
+
+  <script src="/static/assets/vendor/libs/i18n/i18n.js"></script>
+  <script src="/static/assets/vendor/libs/typeahead-js/typeahead.js"></script>
+  
+  <script src="/static/assets/vendor/js/menu.js"></script>
+  <!-- endbuild -->
+
+  <!-- Vendors JS -->
+  <script src="/static/assets/vendor/libs/moment/moment.js"></script>
+  <script src="/static/assets/vendor/libs/flatpickr/flatpickr.js"></script>
+  <script src="/static/assets/vendor/libs/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+  <script src="/static/assets/vendor/libs/bootstrap-daterangepicker/bootstrap-daterangepicker.js"></script>
+  <script src="/static/assets/vendor/libs/jquery-timepicker/jquery-timepicker.js"></script>
+  <script src="/static/assets/vendor/libs/pickr/pickr.js"></script>
+  <script src="/static/assets/vendor/libs/moment/moment.js"></script>
+  <script src="/static/assets/vendor/libs/datatables/jquery.dataTables.js"></script>
+  <script src="/static/assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
+  <script src="/static/assets/vendor/libs/datatables-responsive/datatables.responsive.js"></script>
+  <script src="/static/assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.js"></script>
+  <script src="/static/assets/vendor/libs/datatables-buttons/datatables-buttons.js"></script>
+  <script src="/static/assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.js"></script>
+
+  
+
+  <!-- Main JS -->
+  <script src="/static/assets/js/main.js"></script>
+
+  <!-- Page JS -->
+  <script src="/static/assets/js/app-invoice-list.js"></script>
+
+
+
+ {% endblock %}
+
+{% endblock body %}
+</body>
+</html>

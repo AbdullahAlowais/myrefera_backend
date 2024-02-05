@@ -1,0 +1,15 @@
+<form action="{% url 'split_payment' %}" method="post">
+    {% csrf_token %}
+    <script
+        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="{{ STRIPE_PUBLISHABLE_KEY }}"
+        data-amount="1000" 
+        data-name="Split Payment"
+        data-description="Payment Description"
+        data-image="/static/app-assets/images/avatars/mainwebsite.png"
+        data-locale="auto">
+    </script>
+</form>
+
+
+<script src="https://js.stripe.com/v3/"></script>
